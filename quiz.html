@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body onload="showQuestion(0)">
+    <div class="card">
+        <div class="card-head">
+            <h3 id="head" class="text-center">
+                <script>
+                    document.write(sessionStorage.getItem("name").toUpperCase())
+                </script>
+            </h3>
+        </div>
+        <div class="card-body">
+            <h4 class="card-title" id="questionElement">Q1. The Correct Answer Of Equation, 8*6 is</h4>
+            <p class="card-text optionElement p-2" onclick="putActiveClass(this)">a) Option 1 Goes Here</p>
+            <p class="card-text optionElement p-2" onclick="putActiveClass(this)">b) Option 2 Goes Here</p>
+            <p class="card-text optionElement p-2" onclick="putActiveClass(this)">c) Option 3 Goes Here</p>
+            <p class="card-text optionElement p-2" onclick="putActiveClass(this)">d) Option 4 Goes Here</p>
+        </div>
+        <div class="card-footer text-muted">
+            <a href="#" class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">Next Question</a>
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
